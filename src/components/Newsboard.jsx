@@ -52,15 +52,14 @@ const Newsboard = ({category}) => {
         fetch(url)
             .then((response) => response.json())
             .then((data) => {
-                console.log(data); // Add this line
+                console.log(data);
                 setArticles(data.articles);
             });
     }, [category]);
 
     return (
         <div>
-            <h2 className="text-center">
-                Latest <span className="badge bg-danger">News</span>
+            <h2 className="text-center"> Latest <span className="badge bg-danger">News</span>
             </h2>
             <div className="d-flex flex-wrap justify-content-center">
                 {articles.map((news, index) => {

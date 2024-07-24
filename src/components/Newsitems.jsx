@@ -97,9 +97,10 @@ const Newsitems = ({ title, description, src, url }) => {
             {/* <img src={src || loadingSpinner} className="card-img-top" alt={title || "News image"} /> */}
             <img src={src || image} className="card-img-top"  alt={title || "News image"}  />
             <div className="card-body">
-                <h5 className="card-title">{title.slice(0,50)}</h5>
-                <p className="card-text">{description?description.slice(0,90):"Stay tuned for more details! This story is breaking and will be updated soon with the latest information. Check back later for a full update."}</p>
-                <a href={url} className="btn btn-primary">Read More</a>
+                <h5 className="card-title">{title.slice(0,100)}</h5>
+                <p className="card-text">{description?description.slice(0,90):"Read More"} </p>
+            
+    <a href={url} className="btn btn-primary">Read More</a>
             </div>
         </div>
     );
